@@ -32,14 +32,25 @@ body {
   -moz-border-radius: 20px;
   -ms-border-radius: 20px;
   -o-border-radius: 20px;
-
   border-bottom-right-radius: 100px;
+}
+
+@media (min-width: 768px) {
+  .card {
+    width: 40%;
+  }
 }
 
 .inputs {
   display: flex;
   justify-content: space-between;
   color: var(--neutral-smokey-grey);
+}
+
+@media (min-width: 768px) {
+  .inputs {
+    justify-content: left;
+  }
 }
 
 .inputs p {
@@ -58,6 +69,7 @@ body {
 label {
   font-weight: bold;
   letter-spacing: 2px;
+  width: 100% !important;
 }
 
 input {
@@ -75,6 +87,12 @@ input {
   -o-border-radius: 5px;
 }
 
+@media (min-width: 768px) {
+  input {
+    width: calc(200% / 3);
+  }
+}
+
 input:hover,
 input:focus {
   border-color: var(--primary-purple);
@@ -87,6 +105,12 @@ input:focus {
   justify-content: center;
   position: relative;
   z-index: 1;
+}
+
+@media (min-width: 768px) {
+  .calc-button {
+    justify-content: right;
+  }
 }
 
 .calc-button::before {
@@ -115,6 +139,7 @@ input:focus {
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
+  cursor: pointer;
 }
 
 .calc-button button:hover {

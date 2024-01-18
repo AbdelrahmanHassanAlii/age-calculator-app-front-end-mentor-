@@ -1,22 +1,22 @@
-let button = document.querySelector(".calc-button");
+let button = document.querySelector(".calc-button button");
 button.addEventListener("click", () => {
   // get the 3 inputs
   let daysInput = document.getElementById("day").value;
   let monthsInput = document.getElementById("month").value;
-    let yearsInput = document.getElementById("year").value;
-    
-    let inputs = document.querySelectorAll(`input`);
-    let paragraphs = document.querySelectorAll(`.inputs p`);
-    let labels = document.querySelectorAll(`label`);
-    inputs.forEach((input) => {
-        input.style.borderColor = "hsl(0, 0%, 86%)";
-    });
-    paragraphs.forEach((paragraph) => {
-        paragraph.innerHTML = ``;
-    });
-    labels.forEach((label) => { 
-        label.style.color = `hsl(0, 1%, 44%)`;
-    });
+  let yearsInput = document.getElementById("year").value;
+
+  let inputs = document.querySelectorAll(`input`);
+  let paragraphs = document.querySelectorAll(`.inputs p`);
+  let labels = document.querySelectorAll(`label`);
+  inputs.forEach((input) => {
+    input.style.borderColor = "hsl(0, 0%, 86%)";
+  });
+  paragraphs.forEach((paragraph) => {
+    paragraph.innerHTML = ``;
+  });
+  labels.forEach((label) => {
+    label.style.color = `hsl(0, 1%, 44%)`;
+  });
   //cheek if day input is empty
   if (daysInput === ``) {
     document.querySelector(`.for-day`).innerHTML = `This field is required`;
