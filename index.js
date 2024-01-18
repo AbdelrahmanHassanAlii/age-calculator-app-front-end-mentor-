@@ -42,8 +42,20 @@ button.addEventListener("click", () => {
     ).style.color = `hsl(0, 100%, 67%)`;
     trueDay = 0;
   }
+  //cheek if day input is out of range
+  if (parseInt(daysInput) <= 0 || parseInt(daysInput) > 31) {
+    document.querySelector(
+      `.for-day`
+    ).innerHTML = `This field is out of range 1 to 31 days`;
+    document.querySelector(`.for-day`).style.color = `hsl(0, 100%, 67%)`;
+    document.querySelector("#day").style.borderColor = "hsl(0, 100%, 67%)";
+    document.querySelector(
+      'label[for="day"]'
+    ).style.color = `hsl(0, 100%, 67%)`;
+    trueDay = 0;
+  }
+  //cheek if month input is empty
   if (monthsInput === ``) {
-    //cheek if month input is empty
     document.querySelector(`.for-month`).innerHTML = `This field is required`;
     document.querySelector(`.for-month`).style.color = `hsl(0, 100%, 67%)`;
     document.querySelector("#month").style.borderColor = "hsl(0, 100%, 67%)";
@@ -57,6 +69,18 @@ button.addEventListener("click", () => {
     document.querySelector(
       `.for-month`
     ).innerHTML = `This field is should be a number`;
+    document.querySelector(`.for-month`).style.color = `hsl(0, 100%, 67%)`;
+    document.querySelector("#month").style.borderColor = "hsl(0, 100%, 67%)";
+    document.querySelector(
+      'label[for="month"]'
+    ).style.color = `hsl(0, 100%, 67%)`;
+    trueMonth = 0;
+  }
+  //cheek if month input is out of range
+  if (parseInt(monthsInput) <= 0 || parseInt(monthsInput) > 12) {
+    document.querySelector(
+      `.for-month`
+    ).innerHTML = `This field is out of range 1 to 12 month`;
     document.querySelector(`.for-month`).style.color = `hsl(0, 100%, 67%)`;
     document.querySelector("#month").style.borderColor = "hsl(0, 100%, 67%)";
     document.querySelector(
@@ -79,6 +103,21 @@ button.addEventListener("click", () => {
     document.querySelector(
       `.for-year`
     ).innerHTML = `This field is should be a number`;
+    document.querySelector(`.for-year`).style.color = `hsl(0, 100%, 67%)`;
+    document.querySelector("#year").style.borderColor = "hsl(0, 100%, 67%)";
+    document.querySelector(
+      'label[for="year"]'
+    ).style.color = `hsl(0, 100%, 67%)`;
+    trueYear = 0;
+  }
+
+    //cheek if years input isnot number
+    let currentDate = new Date();
+    let currentYear = currentDate.getFullYear();
+  if (parseInt(yearsInput) <= 0 || parseInt(yearsInput) > currentYear) {
+    document.querySelector(
+      `.for-year`
+    ).innerHTML = `This field is out of range 0 to ${currentYear}`;
     document.querySelector(`.for-year`).style.color = `hsl(0, 100%, 67%)`;
     document.querySelector("#year").style.borderColor = "hsl(0, 100%, 67%)";
     document.querySelector(
