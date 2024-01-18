@@ -12,18 +12,14 @@
       href="./assets/images/favicon-32x32.png"
     />
 
-    <title>Frontend Mentor | Age calculator app</title>
+    <link rel="stylesheet" href="index.css" />
 
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    />
+
+    <title>Frontend Mentor | Age calculator app</title>
   </head>
   <body>
     <!-- Day
@@ -40,15 +36,21 @@
   -- days -->
     <div class="card">
       <div class="inputs">
-        <label for="day">DAY</label>
-        <input type="text" id="day" placeholder="DD" />
-        <p class="for-day"></p>
-        <label for="month">MONTH</label>
-        <input type="text" id="month" placeholder="MM" />
-        <p class="for-month"></p>
-        <label for="year">YEAR</label>
-        <input type="text" id="year" placeholder="YYYY" />
-        <p class="for-year"></p>
+        <div class="input-1">
+          <label for="day">DAY</label>
+          <input type="text" id="day" placeholder="DD" />
+          <p class="for-day"></p>
+        </div>
+        <div class="input-2">
+          <label for="month">MONTH</label>
+          <input type="text" id="month" placeholder="MM" />
+          <p class="for-month"></p>
+        </div>
+        <div class="input-3">
+          <label for="year">YEAR</label>
+          <input type="text" id="year" placeholder="YYYY" />
+          <p class="for-year"></p>
+        </div>
       </div>
 
       <div class="calc-button">
