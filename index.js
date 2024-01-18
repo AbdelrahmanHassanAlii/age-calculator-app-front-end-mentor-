@@ -5,14 +5,16 @@ button.addEventListener("click", () => {
   let monthsInput = document.getElementById("month").value;
   let yearsInput = document.getElementById("year").value;
   //create new date
-  let fullDate = new Date(`${monthsInput}-${daysInput}-${yearsInput}`);
+  let birthdate = new Date(
+    `${monthsInput}-${daysInput}-${yearsInput}`
+  ).getTime();
   // Check if a valid fullDate is selected
-  if (isNaN(fullDate.getTime())) {
+  if (isNaN(birthdate)) {
     alert("Please enter a valid birthdate.");
     return;
   }
-  console.log(fullDate.getTime());
   //get date now
-  let currentDate = Date.now();
-  console.log(currentDate);
+  let today = Date.now();
+  //calc the full age
+  let ageInMilliseconds = today - birthdate;
 });
