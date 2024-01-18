@@ -25,5 +25,10 @@ button.addEventListener("click", () => {
   );
   const days = Math.floor(
     (ageInMilliseconds % (30.44 * 24 * 60 * 60 * 1000)) / (24 * 60 * 60 * 1000)
-  );
+    );
+    
+    //set new values of years, months and days
+    document.querySelector(`.years-output-num`).innerHTML = years;
+    document.querySelector(`.months-output-num`).innerHTML = months;
+    document.querySelector(`.days-output-num`).innerHTML = days;
 });
